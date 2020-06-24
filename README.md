@@ -32,17 +32,3 @@ Go to the TestSite directory and run ``python manage.py runserver``
 ## Go to home page
 After starting the server go to the ``https://127.0.0.1:8000`` i.e. homepage of the website.
 
-## Facilities provided to the end user
-
-  In order to do something you must have an account. So you can **signup** if you don't have one and you are good to go.
-  Now you have an account so after successful **login** you can
-  
-  1. know about trains: **User** need to provide **train number** as **input**. If train number is valid then train information will be displayed to the user such as **seats availability**, whether **food** is available or not, on **which day** of the week it runs, **train route**, **arrival time** and **departure time** and much more.
-  
-  2. find trains between stations: Provide two **station codes** and you will get to know all trains passes through both the specified stations. Both station codes must be different.
-  
-  3. book a ticket: Booking a ticket is very simple. You just need to fill a form correctly. You will have to provide **train number**, **first name**, **last name**, select **gender** from drop down menu, **age**, select **class(sleeper, 1 AC, 2 AC, 3 AC)** from drop down menu and **phone number**.
-          
-## Other facilities
-  1. HTML pages are linked for better user experience.
-      
