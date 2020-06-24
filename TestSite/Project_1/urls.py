@@ -1,4 +1,4 @@
-"""Project URL Configuration
+"""Project_1 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from railway import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signup/', views.signup),
+    path('login/', views.login_user),
+    path('', views.home),    
+    path('logout/', views.logout_user),
+    path('traininfo/', views.traininfo),
+    path('findtrains/', views.findtrains),
+    path('ticket/', views.ticket),
 ]
