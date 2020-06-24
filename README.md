@@ -11,13 +11,13 @@ Date: "26 June 2020"
     
         1. ./railway/views.py : Contains important methods which return HttpResponse object
     
-        2. ./Project/urls.py : Map url to methods in views
+        2. ./Project_1/urls.py : Map url to methods in views
     
         3. ./static : Css and Images
     
         4. ./templates : HTML pages
     
-        5. ./Project/settings.py: Store database details, template path, static path.
+        5. ./Project_1/settings.py: Store database details, template path, static path.
 
 ## Create database, create and populate tables
 1) Open ubuntu command prompt
