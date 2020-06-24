@@ -3,7 +3,7 @@
 ---
 Title: "Railway Management System"
 Author: "Vraj Mistry & Ekansh Verma"
-Date: "22 October 2016"
+Date: "26 June 2020"
 ---
 
 ## Project Structure
@@ -22,15 +22,15 @@ Date: "22 October 2016"
 ## Create database, create and populate tables
 1) Open ubuntu command prompt
 2) Start mysql as `mysql -u <your_user> -p`
-3) Create database `manage_rail` as `create database manage_rail;`
-4) Select database as `use manage_rail;`
-5) Use `commands.sql` file in the main repository to create and populate tables. Run `source <path>/MyRailway/commands.sql`
+3) Create database `raildb` as `create database raildb;`
+4) Select database as `use raildb;`
+5) Use `commandlist.sql` file in the main repository to create and populate tables. Run `source <path>/MyRailway/commandlist.sql`
 
 ## How to start server?
-Go to the Project_1 directory and run ``python manage.py runserver``
+Go to the TestSite directory and run ``python manage.py runserver``
 
 ## Go to home page
-After starting the server go to the ``https://127.0.0.1:8001/home`` i.e. homepage of the website.
+After starting the server go to the ``https://127.0.0.1:8000`` i.e. homepage of the website.
 
 ## Facilities provided to the end user
 
