@@ -1,12 +1,11 @@
 # MyRailway
 
----
 Title: "Railway Management System"
 Author: "Vraj Mistry & Ekansh Verma"
 Date: "26 June 2020"
----
 
 ## Project Structure
+
         . refers to Project Directory i.e. current working directory
     
         1. ./railway/views.py : Contains important methods which return HttpResponse object
