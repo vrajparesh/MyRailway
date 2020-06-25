@@ -67,9 +67,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'raildb',
         'USER': 'root',
-        'PASSWORD': 'toor',
+        'PASSWORD': 'bornaswinner21#',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '2807',
     }
 }
 
