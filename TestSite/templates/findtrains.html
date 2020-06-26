@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>home</title>
+  <title>Search Train</title>
   <link rel="stylesheet" href="{% static 'css/findtrains.css' %}" /> 
 </head>
 <body>  
@@ -16,7 +16,7 @@
  		<input type="text" name="sstation"><br><br>
  	    <input type="submit">
 	</form> <br> 
-    <a href="/logout/"> <button> logout </button> </a><br> 
+    <a href='{% url 'logout'%}'> <button> logout </button> </a><br> 
   </center>    
   <center>
   	{% if show %}
@@ -24,7 +24,7 @@
 	{% for trainno in trains %}
 	<i>{{trainno.0}}</i><br>
 	{% endfor %}<br>
-	<a href="/traininfo/"> <button>click here to know the details of these trains </button></a><br>
+	<a href='{% url 'traininfo'%}'> <button>click here to know the details of these trains </button></a><br>
 	{% endif %}
   </center>
 </body>
