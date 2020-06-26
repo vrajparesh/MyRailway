@@ -122,7 +122,7 @@ def ticket(request):
 		train = c.fetchall()
 
 		if len(train) == 0:
-			return HttpResponse("Incorrect Train Number")
+			return HttpResponse("<h3>Incorrect Train Number.</h3> Press back on your browser to continue to fill form. ")
 
 		train = train[0]
 
@@ -139,7 +139,7 @@ def ticket(request):
 				break	
 
 		if invalid:
-			return HttpResponse("invalid fname, characters allowed [a-z]")
+			return HttpResponse("<h3>Invalid fname, characters allowed [a-z].</h3> Press back on your browser to continue to fill form.")
 
 		invalid = False
 		
@@ -152,10 +152,10 @@ def ticket(request):
 				break
 
 		if invalid:
-			return HttpResponse("invalid lname, characters allowed [a-z]")
+			return HttpResponse("Invalid lname, characters allowed [a-z].</h3> Press back on your browser to continue to fill form.")
 
 		if age == "" or 'e' in age or int(age) > 100:
-			return HttpResponse("invalid age")
+			return HttpResponse("Invalid age. Press back on your browser to continue to fill form.")
 
 		num = list(map(chr, range(48, 58)))
 		invalid = False
@@ -168,17 +168,17 @@ def ticket(request):
 				break
 
 		if invalid:
-			return HttpResponse("invalid phone number")
+			return HttpResponse("<h3>Invalid phone number</h3> Press back on your browser to continue to fill form.")
 
 		gender = gender[0]
 		if str(tclass) == "sleeper" and int(train[2]) <= 0:
-			return HttpResponse("seat not available in sleeper class")
+			return HttpResponse("Seat unavailable in sleeper class. Press back on your browser to continue to fill form.")
 		if str(tclass) == "first class ac" and int(train[3]) <= 0:
-			return HttpResponse("seat not available in first class ac")
+			return HttpResponse("Seat unavailable in first class ac. Press back on your browser to continue to fill form.")
 		if str(tclass) == "second class ac" and int(train[4]) <= 0:
-			return HttpResponse("seat not available in second class ac")
+			return HttpResponse("Seat unavailable in second class ac. Press back on your browser to continue to fill form.")
 		if str(tclass) == "third class ac" and int(train[5]) <= 0:
-			return HttpResponse("seat not available in third class ac")
+			return HttpResponse("Seat unavailable in third class ac. Press back on your browser to continue to fill form.")
 
 		c = connection.cursor()		
 		c.execute("SELECT * FROM Ticket")

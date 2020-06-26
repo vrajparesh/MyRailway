@@ -60,11 +60,6 @@ th, td {
     text-align: left;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
-.logout{
-  background-color: red;
-}
-
-.lgt{
-  background-color: red;
+.logout {
+    background-color: red;
 }
