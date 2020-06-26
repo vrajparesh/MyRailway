@@ -2,7 +2,7 @@
 
 input[type=submit]
 {
-    background-color: blue; /* Green */
+    background-color: blue; 
     border: none;
     color: white;
     padding: 7px 16px;
@@ -19,7 +19,7 @@ body {
 }
 
 button {
-    background-color: green; /* Green */
+    background-color: green;
     border: none;
     color: white;
     padding: 7px 16px;
@@ -31,7 +31,7 @@ button {
 }
 
 b {
-    color: red;
+    color: rgb(12,40,62);
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -50,7 +50,7 @@ h2 {
 }
 
 i {
-    background-color: green;
+    background-color: rgb(196, 146, 80);
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 30px;
@@ -72,4 +72,8 @@ th, td {
     padding: 5px;
     text-align: left;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lgt3{
+  background-color: red;
 }

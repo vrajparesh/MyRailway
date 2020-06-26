@@ -13,14 +13,19 @@ h1 {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 button {
-    background-color: rgb(196, 146, 80); /* Green */
-    border: none;
+    background-color:  rgb(196, 146, 80);
+    border-radius: 5%;
     color: white;
-    padding: 1.2vw 3.4vw;
+    padding: 7px 16px;
     text-align: center;
-		font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.4vw;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lgt1{
+	background-color: red;
 }

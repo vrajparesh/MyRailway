@@ -8,7 +8,7 @@ body {
 
 h1 {
 	text-align: center;
-	color: red;
+	color: rgb(12,40,62);
 	font-size: 5vw;
 	font-family: 'Source Sans Pro', sans-serif;
 }
@@ -20,7 +20,7 @@ form {
 
 input[type=submit]
 {
-    background-color: blue; /* Green */
+    background-color: blue; 
     border: none;
     color: white;
     padding: 7px 16px;
@@ -32,6 +32,6 @@ input[type=submit]
 }
 
 b {
-	color: red;
+	color: black;
 	font-family: 'Source Sans Pro', sans-serif;
 }
