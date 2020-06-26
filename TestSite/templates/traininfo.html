@@ -14,7 +14,7 @@
       <input type="number" name="trainno" min="10000" max="99999"><br><br>  
       <input type="submit"><br>
     </form> <br>
-      <a href="/logout/"> <button> logout </button> </a><br> 
+      <a href='{% url 'logout' %}'> <button> logout </button> </a><br> 
   </center>
   {% if show %}
   <br>
@@ -65,18 +65,22 @@
 <table border = 1, style="width:100%">  
   <tr>
     <th>Station Code</th>
-    <th>arrival time</th>
-    <th>departure time</th>
+    <th>Station Name</th>
+    <th>Arrival Time</th>
+    <th>Departure Time</th>
+    
+
   </tr>
   {% for row in stop %}
     <tr>
       <td>{{row.1}}</td>
+      <td>{{row.5}}</td>
       <td>{{row.2}}</td>
       <td>{{row.3}}</td>
     </tr>  
   {% endfor %}
-</table> <br>
-<table border = 1, style="width:100%">
+<!-- </table> <br>
+ <table border = 1, style="width:100%">
   <tr>
     <th>Station Code</th>
     <th>Station Name</th>
@@ -87,7 +91,8 @@
       <td>{{value}}</td>
     </tr>  
   {% endfor %}
-</table> <br>
+</table> -->
+<br>
 {% endif %}
 </body>
 </html>

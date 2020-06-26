@@ -18,12 +18,12 @@ from django.urls import path
 from railway import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('signup/', views.signup),
-    path('login/', views.login_user),
-    path('', views.home),    
-    path('logout/', views.logout_user),
-    path('traininfo/', views.traininfo),
-    path('findtrains/', views.findtrains),
-    path('ticket/', views.ticket),
+    path('admin/', admin.site.urls, name='admin'),
+    path('signup/', views.signup, name='signup'),
+    path('login/', views.login_user, name='login'),
+    path('', views.home, name='home'),    
+    path('logout/', views.logout_user, name='logout'),
+    path('traininfo/', views.traininfo, name='traininfo'),
+    path('findtrains/', views.findtrains, name='findtrains'),
+    path('ticket/', views.ticket, name='ticket'),
 ]
