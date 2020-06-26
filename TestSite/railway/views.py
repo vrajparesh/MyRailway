@@ -33,7 +33,8 @@ def traininfo(request):
 		c = connection.cursor()
 		c.execute('SELECT * FROM Train WHERE Train_No = %d' %(trainno))
 		train = c.fetchone()
-		c.execute('SELECT * FROM Stoppage WHERE Train_No = %d' %(trainno))
+		c.execute('SELECT * FROM Stoppage as s,Station as st WHERE (Train_No = %d and s.Station_Code = st.Station_Code) order by Arrival_Time' %(trainno))
+		#from stoppage as s,station as st where ( Train_No = '12215' and s.Station_Code = st.Station_Code) order by Arrival_Time
 		stoppage = c.fetchall()
 
 		c.execute('SELECT * FROM Station')
