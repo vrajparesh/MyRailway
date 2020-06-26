@@ -3,16 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome</title>
-	<link rel="stylesheet" href="{% static 'css/login_success.css' %}" />
+	<title>Profile</title>
+	<link rel="stylesheet" href="{% static 'css/login_success.css' %}" /> 
 </head>
 <body>
 	<center>
-		<h1> Hi {{user.username}} </h1><br><br><br>
-		<a href="/traininfo/"><button>Know About Trains</button></a><br><br>
-		<a href="/findtrains/"><button>Find Trains Between Stations</button></a><br><br>
-		<a href="/ticket/"><button>Book A Ticket</button></a><br><br><br><br><br><br><br><br><br>
-		<a href="/logout/"> <button class="lgt1"> Logout </button></a>
+		<h1> Welcome {{user.username}}! </h1>		
+		<a href='{% url 'traininfo'%}'><button>Know About Trains</button></a>
+		<a href='{% url 'findtrains'%}'><button>Find Trains Between Stations</button></a>
+		<a href='{% url 'ticket'%}'><button>Book A Ticket</button></a>
+		<a href='{% url 'logout'%}'> <button> Logout </button></a>
     </center>
 </body>
 </html>

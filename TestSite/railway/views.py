@@ -47,7 +47,7 @@ def traininfo(request):
 
 		context = {"info":train, "stop":stoppage, "station":station, "show":True}
 		if train == None:
-			return HttpResponse("invalid train number")
+			return HttpResponse(render(request, "404.html",context))
 		else:
 			return HttpResponse(render(request, "traininfo.html", context))
 	else:
@@ -88,7 +88,7 @@ def findtrains(request):
 		trains = c.fetchall()
 
 		if len(trains) == 0:
-			return HttpResponse("invalid station code")
+			return HttpResponse(render(request,'404.html'))
 
 		context = {"trains":trains, "show":True}
 
@@ -241,7 +241,7 @@ def signup(request):
 				break
 
 		if invalid:
-			return HttpResponse("invalid username, characters allowed [a-z] and [0-9]")
+			return HttpResponse("<h3>Invalid username, characters allowed [a-z] and [0-9]. <h3> Press back on your browser to continue to fill form ")
 
 
 		invalid = False
@@ -255,10 +255,10 @@ def signup(request):
 				break
 
 		if invalid:
-			return HttpResponse("space not allowed in the password")
+			return HttpResponse("<h3>Spaces are not allowed in password.</h3> Press back on your browser to continue to fill form")
 		
 		if len(address) == address.count(' '):
-			return HttpResponse("invalid address")
+			return HttpResponse("<h3> Invalid address. <h3> Press back on your browser to continue to fill form")
 
 		
 		invalidf, invalids = False, False	
@@ -278,7 +278,7 @@ def signup(request):
 				break
 
 		if invalidf and invalids:
-			return HttpResponse("atleast one contact must be valid")
+			return HttpResponse("<h3>Atleast one contact must be valid.</h3> Press back on your browser to continue to fill form")
 
 		try:
 			user = User.objects.create_user(username, None, password)
@@ -289,7 +289,7 @@ def signup(request):
 			if not invalids:	
 				c.execute('INSERT INTO Contact VALUES("%s", "%s")' %(username, snumber))
 			
-			return HttpResponse("signup successful! cheers")
+			return HttpResponse("<h3>Signup Successful!</h3> Go Back to Login")
 
 		except Exception as e:
 			print(e)
@@ -310,7 +310,7 @@ def login_user(request):
 			return HttpResponse(render(request, "login_success.html"))
 			
 		else:
-			return HttpResponse("invalid credentials")
+			return HttpResponse("Invalid Credentials. Press back on your browser to go back to Login")
 
 		'''
 		try:

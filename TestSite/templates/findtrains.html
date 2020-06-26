@@ -16,7 +16,7 @@
  		<input type="text" name="sstation"><br><br>
  	    <input type="submit">
 	</form> <br>
-    <a href="/logout/"> <button class="lgt3"> Logout </button> </a><br>
+    <a href='{% url 'logout'%}'> <button class="lgt3"> Logout </button> </a><br>
   </center>
   <center>
   	{% if show %}
@@ -24,7 +24,7 @@
 	{% for trainno in trains %}
 	<i>{{trainno.0}}</i><br>
 	{% endfor %}<br>
-	<a href="/traininfo/"> <button>click here to know the details of these trains </button></a><br>
+	<a href='{% url 'traininfo'%}'> <button>Click Here to know Train Details </button></a><br>
 	{% endif %}
   </center>
 </body>
