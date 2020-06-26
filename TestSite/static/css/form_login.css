@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 body {
-	background-image: url("../images/WRailway.jpg");
+	background-image: url("../images/54.jpg");
 	background-repeat: no-repeat;
     background-position: right top;
 }
@@ -8,6 +10,7 @@ h1 {
 	text-align: center;
 	color: red;
 	font-size: 5vw;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 form {
@@ -22,6 +25,7 @@ input[type=submit]
     color: white;
     padding: 7px 16px;
     text-align: center;
+		font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
@@ -29,4 +33,5 @@ input[type=submit]
 
 b {
 	color: red;
+	font-family: 'Source Sans Pro', sans-serif;
 }

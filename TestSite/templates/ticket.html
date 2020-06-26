@@ -4,11 +4,11 @@
 <html>
 <head>
   <title>home</title>
-  <link rel="stylesheet" href="{% static 'css/ticket.css' %}" /> 
+  <link rel="stylesheet" href="{% static 'css/ticket.css' %}" />
 </head>
-<body>  
+<body>
   <center>
-    
+
     {% if not show %}
     <h1> Book Tickets </h1>
  <form method="POST">{% csrf_token %}
@@ -22,7 +22,7 @@
   <select name="gender">
     <option>Male</option>
     <option>Female</option>
-  </select><br> <br> 
+  </select><br> <br>
   <b>AGE</b><br>
   <input type="number" name="age" min="6"><br><br>
   <b>CLASS</b><br>
@@ -31,9 +31,9 @@
     <option>first class ac</option>
     <option>second class ac</option>
     <option>third class ac</option>
-  </select><br> <br> 
+  </select><br> <br>
   <b>PHONE NO</b><br>
-  <input type="text" name="number"><br><br>  
+  <input type="text" name="number"><br><br>
   <input type="submit" >
 </form><br>
 <a href='{% url 'logout' %}'> <button>logout </button></a><br>
@@ -48,6 +48,3 @@
     </center>
 </body>
 </html>
-
-
-
