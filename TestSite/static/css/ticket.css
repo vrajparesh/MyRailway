@@ -2,7 +2,7 @@
 
 input[type=submit]
 {
-    background-color: blue; /* Green */
+    background-color: blue; 
     border: none;
     color: white;
     padding: 7px 16px;
@@ -20,7 +20,7 @@ body {
 }
 
 button {
-    background-color: green; /* Green */
+    background-color: green;
     border-radius: 5%;
     color: white;
     padding: 7px 16px;
@@ -32,6 +32,7 @@ button {
 }
 
 b {
+   font-family: 'Source Sans Pro', sans-serif;
     color: black;
 }
 
@@ -61,5 +62,9 @@ th, td {
 }
 
 .logout{
+  background-color: red;
+}
+
+.lgt{
   background-color: red;
 }

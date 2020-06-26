@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>home</title>
+  <title>Book Your Ticket</title>
   <link rel="stylesheet" href="{% static 'css/ticket.css' %}" />
 </head>
 <body>
@@ -22,15 +22,16 @@
   <select name="gender">
     <option>Male</option>
     <option>Female</option>
+    <option> Rather Not Specify </option>
   </select><br> <br>
   <b>AGE</b><br>
   <input type="number" name="age" min="6"><br><br>
   <b>CLASS</b><br>
   <select name="tclass">
-    <option>sleeper</option>
-    <option>first class ac</option>
-    <option>second class ac</option>
-    <option>third class ac</option>
+    <option>Sleeper</option>
+    <option>First Class AC</option>
+    <option>Second Class AC</option>
+    <option>Third Class AC</option>
   </select><br> <br>
   <b>PHONE NO</b><br>
   <input type="text" name="number"><br><br>
@@ -44,6 +45,7 @@
   <a href='{% url 'traininfo' %}'><button>know about trains</button></a><br><br> 
   <a href='{% url 'findtrains' %}'><button>find trains b/w stations</button></a><br><br> 
   <a href='{% url 'logout' %}'> <button>logout </button></a><br><br> 
+
 {% endif %}
     </center>
 </body>
